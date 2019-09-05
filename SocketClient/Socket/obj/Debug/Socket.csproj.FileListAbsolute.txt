@@ -5,3 +5,10 @@ D:\Srouce\Socket\Socket\obj\Debug\Socket.csprojAssemblyReference.cache
 D:\Srouce\Socket\Socket\obj\Debug\Socket.csproj.CoreCompileInputs.cache
 D:\Srouce\Socket\Socket\obj\Debug\Socket.exe
 D:\Srouce\Socket\Socket\obj\Debug\Socket.pdb
+E:\GitHub\Client-Server-Socket\SocketClient\Socket\bin\Debug\Socket.exe.config
+E:\GitHub\Client-Server-Socket\SocketClient\Socket\bin\Debug\Socket.exe
+E:\GitHub\Client-Server-Socket\SocketClient\Socket\bin\Debug\Socket.pdb
+E:\GitHub\Client-Server-Socket\SocketClient\Socket\obj\Debug\Socket.csprojAssemblyReference.cache
+E:\GitHub\Client-Server-Socket\SocketClient\Socket\obj\Debug\Socket.csproj.CoreCompileInputs.cache
+E:\GitHub\Client-Server-Socket\SocketClient\Socket\obj\Debug\Socket.exe
+E:\GitHub\Client-Server-Socket\SocketClient\Socket\obj\Debug\Socket.pdb

@@ -25,20 +25,27 @@ public class Y2Client
             Stream stream = client.GetStream();
 
             Console.WriteLine("Connected to Y2Server.");
-            Console.Write("Enter your name: ");
+            Console.Write("Enter your number string: ");
+            string str = Console.ReadLine();
 
-            Thread writeThread = new Thread(() => write(stream));
+            // 2. send
+            byte[] data = encoding.GetBytes(str);
 
-            writeThread.Start();
+            stream.Write(data, 0, data.Length);
+            data = encoding.GetBytes(str);
 
-            writeThread.Join();
-            // 3. receive
-            byte[] data = new byte[BUFFER_SIZE];
+
+            data = new byte[BUFFER_SIZE];
             stream.Read(data, 0, BUFFER_SIZE);
 
-            Console.WriteLine(encoding.GetString(data));
+            string result = encoding.GetString(data).Trim();
+
+            Console.WriteLine( result);
 
             // 4. Close
+
+            stream.Close();
+            client.Close();
 
         }
 
@@ -48,18 +55,5 @@ public class Y2Client
         }
 
         Console.Read();
-    }
-    public static void write(Stream stream)
-    {
-        while (true)
-        {
-            string str = Console.ReadLine();
-
-            // 2. send
-            byte[] data = encoding.GetBytes(str);
-
-            stream.Write(data, 0, data.Length);
-            data = encoding.GetBytes(str);
-        }
     }
 }
