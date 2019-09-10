@@ -17,25 +17,35 @@ namespace SocketSv
         {
             try
             {
-                IPAddress address = IPAddress.Parse("192.168.0.101");
+                //IPAddress address = IPAddress.Parse("192.168.0.101");
 
-                TcpListener listener = new TcpListener(address, PORT_NUMBER);
+                IPEndPoint ipep = new IPEndPoint(IPAddress.Parse("192.168.0.101"), PORT_NUMBER);
 
-                listener.Start();
+                //TcpListener listener = new TcpListener(address, PORT_NUMBER);
 
-                Console.WriteLine("Server started on " + listener.LocalEndpoint);
+                //listener.Start();
+                Socket server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+
+                server.Connect(ipep);
+
+                //Console.WriteLine("Server started on " + listener.LocalEndpoint);
+                Console.WriteLine("Server started on " + server.LocalEndPoint);
                 Console.WriteLine("Waiting for a connection...");
 
-                Socket socket = listener.AcceptSocket();
-                Console.WriteLine("Connection received from " + socket.RemoteEndPoint);
+                //Socket socket = server.AcceptSocket();
+                Console.WriteLine("Connection received from " + server.RemoteEndPoint);
 
-                Thread recvThread = new Thread(()=>ReceiverThread(socket));
+                NetworkStream ns = new NetworkStream(server);
+
+                Thread recvThread = new Thread(()=>ReceiverThread(ns));
 
                 recvThread.Start();
                 recvThread.Join();
 
-                socket.Close();
-                listener.Stop();
+                //socket.Close();
+                //listener.Stop();
+                server.Close();
+                ns.Close();
             }
             catch (Exception ex)
             {
@@ -44,7 +54,7 @@ namespace SocketSv
             Console.Read();
 
         }
-        public static void ReceiverThread(Socket sock)
+        public static void ReceiverThread(NetworkStream ns)
         {
             while (true)
             {
@@ -52,9 +62,10 @@ namespace SocketSv
                 {
                     
                     byte[] data = new byte[BUFFER_SIZE];
-                    sock.Receive(data);
+                    //sock.Receive(data);
+                    ns.Read(data, 0, data.Length);
 
-                    string str = encoding.GetString(data);
+                    string str = encoding.GetString(data,0, ns.Read(data, 0, data.Length));
                     string[] num = str.Split(' ');
                     int[] arr = new int[num.Length];
 
@@ -75,8 +86,11 @@ namespace SocketSv
                         Console.Write($"{i} ");
                         s = s + Convert.ToString(i) + " ";
                     }
-                    sock.Send(encoding.GetBytes(s));
-                }catch(Exception e)
+                    //sock.Send(encoding.GetBytes(s));
+                    ns.Write(Encoding.ASCII.GetBytes(s), 0, s.Length);
+                    ns.Flush();
+                }
+                catch(Exception e)
                 {
                     Console.WriteLine(e.Message);
                 }
