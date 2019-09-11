@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Net.Sockets;
-using System.Text;
+using System.IO;
 using System.Net;
+using System.Text;
 using System.Threading;
 
 namespace SocketSv
@@ -17,34 +18,26 @@ namespace SocketSv
         {
             try
             {
-                //IPAddress address = IPAddress.Parse("192.168.0.101");
+                IPAddress address = IPAddress.Parse("127.0.0.1");
 
-                IPEndPoint ipep = new IPEndPoint(IPAddress.Parse("192.168.0.101"), PORT_NUMBER);
+                TcpListener listener = new TcpListener(address, PORT_NUMBER);
 
-                //TcpListener listener = new TcpListener(address, PORT_NUMBER);
-
-                //listener.Start();
-                Socket server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-
-                server.Connect(ipep);
-
-                //Console.WriteLine("Server started on " + listener.LocalEndpoint);
-                Console.WriteLine("Server started on " + server.LocalEndPoint);
+                listener.Start();
+                Console.WriteLine("Server started on " + listener.LocalEndpoint);
+                
                 Console.WriteLine("Waiting for a connection...");
 
-                //Socket socket = server.AcceptSocket();
-                Console.WriteLine("Connection received from " + server.RemoteEndPoint);
-
-                NetworkStream ns = new NetworkStream(server);
+                TcpClient socket = listener.AcceptTcpClient();
+               
+                Stream ns = socket.GetStream();
 
                 Thread recvThread = new Thread(()=>ReceiverThread(ns));
 
                 recvThread.Start();
                 recvThread.Join();
 
-                //socket.Close();
-                //listener.Stop();
-                server.Close();
+                socket.Close();
+                listener.Stop();
                 ns.Close();
             }
             catch (Exception ex)
@@ -54,7 +47,7 @@ namespace SocketSv
             Console.Read();
 
         }
-        public static void ReceiverThread(NetworkStream ns)
+        public static void ReceiverThread(Stream ns)
         {
             while (true)
             {

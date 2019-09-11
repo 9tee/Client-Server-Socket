@@ -21,7 +21,7 @@ public class Y2Client
             TcpClient client = new TcpClient();
 
             // 1. connect
-            client.Connect("192.168.0.101", PORT_NUMBER);
+            client.Connect("127.0.0.1", PORT_NUMBER);
             Stream stream = client.GetStream();
 
             Console.WriteLine("Connected to Y2Server.");
