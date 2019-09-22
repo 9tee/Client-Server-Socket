@@ -14,7 +14,8 @@ public class Y2Client
     static ASCIIEncoding encoding = new ASCIIEncoding();
 
     public static void Main()
-    {
+    {\\
+
 
         try
         {
