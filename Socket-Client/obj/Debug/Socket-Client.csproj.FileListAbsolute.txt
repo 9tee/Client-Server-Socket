@@ -1,0 +1,7 @@
+E:\GitHub\LTHDH-Socket\Socket-Client\bin\Debug\Socket.exe.config
+E:\GitHub\LTHDH-Socket\Socket-Client\bin\Debug\Socket.exe
+E:\GitHub\LTHDH-Socket\Socket-Client\bin\Debug\Socket.pdb
+E:\GitHub\LTHDH-Socket\Socket-Client\obj\Debug\Socket-Client.csprojAssemblyReference.cache
+E:\GitHub\LTHDH-Socket\Socket-Client\obj\Debug\Socket-Client.csproj.CoreCompileInputs.cache
+E:\GitHub\LTHDH-Socket\Socket-Client\obj\Debug\Socket.exe
+E:\GitHub\LTHDH-Socket\Socket-Client\obj\Debug\Socket.pdb

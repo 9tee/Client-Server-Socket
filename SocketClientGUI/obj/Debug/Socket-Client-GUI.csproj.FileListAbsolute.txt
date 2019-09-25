@@ -1,0 +1,10 @@
+E:\GitHub\LTHDH-Socket\SocketClientGUI\bin\Debug\SocketClientGUI.exe.config
+E:\GitHub\LTHDH-Socket\SocketClientGUI\bin\Debug\SocketClientGUI.exe
+E:\GitHub\LTHDH-Socket\SocketClientGUI\bin\Debug\SocketClientGUI.pdb
+E:\GitHub\LTHDH-Socket\SocketClientGUI\obj\Debug\Socket-Client-GUI.csprojAssemblyReference.cache
+E:\GitHub\LTHDH-Socket\SocketClientGUI\obj\Debug\SocketClientGUI.Form1.resources
+E:\GitHub\LTHDH-Socket\SocketClientGUI\obj\Debug\SocketClientGUI.Properties.Resources.resources
+E:\GitHub\LTHDH-Socket\SocketClientGUI\obj\Debug\Socket-Client-GUI.csproj.GenerateResource.cache
+E:\GitHub\LTHDH-Socket\SocketClientGUI\obj\Debug\Socket-Client-GUI.csproj.CoreCompileInputs.cache
+E:\GitHub\LTHDH-Socket\SocketClientGUI\obj\Debug\SocketClientGUI.exe
+E:\GitHub\LTHDH-Socket\SocketClientGUI\obj\Debug\SocketClientGUI.pdb
