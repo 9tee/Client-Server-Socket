@@ -1,0 +1,104 @@
+﻿using System;
+using System.Net.Sockets;
+using System.IO;
+using System.Net;
+using System.Text;
+using System.Threading;
+
+namespace Socket_Server_GUI
+{
+    class Server
+    {
+        private const int BUFFER_SIZE = 100;
+        private const int PORT_NUMBER = 9999;
+        private ASCIIEncoding encoding;
+        private IPAddress address;
+        private TcpListener listener;
+        private TcpClient socket;
+        //private Stream[] ns = new Stream[5];
+        //private Thread[] recvThread = new Thread[5];
+        private Stream ns; 
+        private Thread recvThread; 
+        private int countClient = -1;
+
+        public Server()
+        {
+            address = IPAddress.Parse("127.0.0.1");
+            listener = new TcpListener(address, PORT_NUMBER);
+            encoding = new ASCIIEncoding();
+        }
+
+        public void End()
+        {
+            socket.Close();
+            listener.Stop();
+            ns.Close();
+        }
+         
+        public void Start()
+        {
+            listener.Start();
+            countClient++;
+            socket = listener.AcceptTcpClient();
+            string s = "A client has connected";
+            Form1.show(s);
+            ns = socket.GetStream();
+            recvThread = new Thread(() => RevAndSend(ns));
+            recvThread.Start();
+            //ns[countClient] = socket.GetStream();
+            //recvThread[countClient] = new Thread(() => RevAndSend(ns[countClient]));
+        }
+
+        public void RevAndSend(Stream ns)
+        {
+            countClient++;
+            while (true)
+            {
+                try
+                {
+
+                    byte[] data = new byte[BUFFER_SIZE];
+
+                    ns.Read(data, 0, BUFFER_SIZE);
+
+                    string result = encoding.GetString(data);
+                    while (result.Contains("  "))
+                    {
+                        result = result.Replace("  ", " ");
+                    }
+                    while (result.Contains("\n"))
+                    {
+                        result = result.Replace("\n", " ");
+                    }
+                    while (result.Contains("\t"))
+                    {
+                        result = result.Replace("\t", " ");
+                    }
+                    result = result.Trim();
+                    Form1.show("Chuoi nhan : " + result);
+                    string[] num = result.Split(' ');
+                    int[] arr = new int[num.Length];
+
+                    for (int i = 0; i < arr.Length; i++)
+                    {
+                        arr[i] = Convert.ToInt32(num[i]);
+                    }
+                    Array.Sort(arr);
+                    String s = "";
+                    foreach (int i in arr)
+                    {
+                        s += Convert.ToString(i) + " ";
+                    }
+                    Form1.show("Chuoi tra : " + s);
+
+                    ns.Write(Encoding.ASCII.GetBytes(s), 0, s.Length);
+                }
+                catch (Exception e)
+                {
+                    break;
+                }
+            }
+        }
+
+    }
+}

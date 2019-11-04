@@ -8,3 +8,13 @@ E:\GitHub\LTHDH-Socket\SocketClientGUI\obj\Debug\Socket-Client-GUI.csproj.Genera
 E:\GitHub\LTHDH-Socket\SocketClientGUI\obj\Debug\Socket-Client-GUI.csproj.CoreCompileInputs.cache
 E:\GitHub\LTHDH-Socket\SocketClientGUI\obj\Debug\SocketClientGUI.exe
 E:\GitHub\LTHDH-Socket\SocketClientGUI\obj\Debug\SocketClientGUI.pdb
+C:\Users\Welcome\Documents\GitHub\Client-Server-Socket\SocketClientGUI\bin\Debug\SocketClientGUI.exe.config
+C:\Users\Welcome\Documents\GitHub\Client-Server-Socket\SocketClientGUI\bin\Debug\SocketClientGUI.exe
+C:\Users\Welcome\Documents\GitHub\Client-Server-Socket\SocketClientGUI\bin\Debug\SocketClientGUI.pdb
+C:\Users\Welcome\Documents\GitHub\Client-Server-Socket\SocketClientGUI\obj\Debug\Socket-Client-GUI.csprojAssemblyReference.cache
+C:\Users\Welcome\Documents\GitHub\Client-Server-Socket\SocketClientGUI\obj\Debug\SocketClientGUI.Form1.resources
+C:\Users\Welcome\Documents\GitHub\Client-Server-Socket\SocketClientGUI\obj\Debug\SocketClientGUI.Properties.Resources.resources
+C:\Users\Welcome\Documents\GitHub\Client-Server-Socket\SocketClientGUI\obj\Debug\Socket-Client-GUI.csproj.GenerateResource.cache
+C:\Users\Welcome\Documents\GitHub\Client-Server-Socket\SocketClientGUI\obj\Debug\Socket-Client-GUI.csproj.CoreCompileInputs.cache
+C:\Users\Welcome\Documents\GitHub\Client-Server-Socket\SocketClientGUI\obj\Debug\SocketClientGUI.exe
+C:\Users\Welcome\Documents\GitHub\Client-Server-Socket\SocketClientGUI\obj\Debug\SocketClientGUI.pdb

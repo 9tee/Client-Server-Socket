@@ -5,3 +5,10 @@ E:\GitHub\LTHDH-Socket\Socket-Client\obj\Debug\Socket-Client.csprojAssemblyRefer
 E:\GitHub\LTHDH-Socket\Socket-Client\obj\Debug\Socket-Client.csproj.CoreCompileInputs.cache
 E:\GitHub\LTHDH-Socket\Socket-Client\obj\Debug\Socket.exe
 E:\GitHub\LTHDH-Socket\Socket-Client\obj\Debug\Socket.pdb
+C:\Users\Welcome\Documents\GitHub\Client-Server-Socket\Socket-Client\bin\Debug\Socket.exe.config
+C:\Users\Welcome\Documents\GitHub\Client-Server-Socket\Socket-Client\bin\Debug\Socket.exe
+C:\Users\Welcome\Documents\GitHub\Client-Server-Socket\Socket-Client\bin\Debug\Socket.pdb
+C:\Users\Welcome\Documents\GitHub\Client-Server-Socket\Socket-Client\obj\Debug\Socket-Client.csprojAssemblyReference.cache
+C:\Users\Welcome\Documents\GitHub\Client-Server-Socket\Socket-Client\obj\Debug\Socket-Client.csproj.CoreCompileInputs.cache
+C:\Users\Welcome\Documents\GitHub\Client-Server-Socket\Socket-Client\obj\Debug\Socket.exe
+C:\Users\Welcome\Documents\GitHub\Client-Server-Socket\Socket-Client\obj\Debug\Socket.pdb

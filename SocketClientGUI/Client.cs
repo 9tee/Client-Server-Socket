@@ -29,7 +29,6 @@ namespace SocketClientGUI
         {
             server.Connect(ipAddress, portNumber);
             stream = server.GetStream();
-
         }
         public void send(string source)
         {
