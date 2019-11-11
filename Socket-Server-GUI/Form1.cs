@@ -26,8 +26,6 @@ namespace Socket_Server_GUI
             textBox.ScrollBars = ScrollBars.Vertical;
             textBox.Size = new Size(301, 207);
             this.Controls.Add(textBox);
-
-
             textBox.Text += "Server Start \r\n";
             textBox.Text += "Waiting for a connection... \r\n";
 

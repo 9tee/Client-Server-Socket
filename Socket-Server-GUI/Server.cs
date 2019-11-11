@@ -15,8 +15,7 @@ namespace Socket_Server_GUI
         private IPAddress address;
         private TcpListener listener;
         private TcpClient socket;
-        //private Stream[] ns = new Stream[5];
-        //private Thread[] recvThread = new Thread[5];
+        //private Timer timer = new Timer();
         private Stream ns; 
         private Thread recvThread; 
         private int countClient = -1;
@@ -40,13 +39,12 @@ namespace Socket_Server_GUI
             listener.Start();
             countClient++;
             socket = listener.AcceptTcpClient();
+            
             string s = "A client has connected";
             Form1.show(s);
             ns = socket.GetStream();
             recvThread = new Thread(() => RevAndSend(ns));
             recvThread.Start();
-            //ns[countClient] = socket.GetStream();
-            //recvThread[countClient] = new Thread(() => RevAndSend(ns[countClient]));
         }
 
         public void RevAndSend(Stream ns)
@@ -70,9 +68,9 @@ namespace Socket_Server_GUI
                     {
                         result = result.Replace("\n", " ");
                     }
-                    while (result.Contains("\t"))
+                    while (result.Contains("\0"))
                     {
-                        result = result.Replace("\t", " ");
+                        result = result.Replace("\0", " ");
                     }
                     result = result.Trim();
                     Form1.show("Chuoi nhan : " + result);
