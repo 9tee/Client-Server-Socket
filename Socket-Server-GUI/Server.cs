@@ -60,19 +60,6 @@ namespace Socket_Server_GUI
                     ns.Read(data, 0, BUFFER_SIZE);
 
                     string result = encoding.GetString(data);
-                    while (result.Contains("  "))
-                    {
-                        result = result.Replace("  ", " ");
-                    }
-                    while (result.Contains("\n"))
-                    {
-                        result = result.Replace("\n", " ");
-                    }
-                    while (result.Contains("\0"))
-                    {
-                        result = result.Replace("\0", " ");
-                    }
-                    result = result.Trim();
                     Form1.show("Chuoi nhan : " + result);
                     string[] num = result.Split(' ');
                     int[] arr = new int[num.Length];

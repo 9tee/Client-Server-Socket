@@ -34,7 +34,6 @@ namespace Socket_Server_GUI
         {
             StartButton.Enabled = false;
             ExitButton.Enabled = true;
-            server.Start();
         }
         public static void show(string s)
         {
@@ -49,6 +48,11 @@ namespace Socket_Server_GUI
         {
             server.End();
             this.Close();
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            server.Start();
         }
     }
 }

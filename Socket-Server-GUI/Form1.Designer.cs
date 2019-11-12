@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.StartButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // label1
@@ -66,6 +67,10 @@
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -87,6 +92,7 @@
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button StartButton;
         public System.Windows.Forms.Button ExitButton;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

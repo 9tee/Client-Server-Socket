@@ -55,6 +55,7 @@ namespace SocketClientGUI
             this.sendBox.Name = "sendBox";
             this.sendBox.Size = new System.Drawing.Size(300, 220);
             this.sendBox.TabIndex = 1;
+            this.sendBox.TextChanged += new System.EventHandler(this.sendBox_TextChanged);
             // 
             // sortButton
             // 
@@ -127,10 +128,6 @@ namespace SocketClientGUI
             this.Text = "Number sorting program";
             this.ResumeLayout(false);
             this.PerformLayout();
-            //
-            // Client Socket
-            //
-            client = new Client();
 
         }
 
@@ -144,7 +141,7 @@ namespace SocketClientGUI
         private System.Windows.Forms.Label portLabel;
         private System.Windows.Forms.Label idLabel;
         private System.Windows.Forms.Button connectButton;
-        private Client client;
+        private Client client = new Client();
     }
 }
 
