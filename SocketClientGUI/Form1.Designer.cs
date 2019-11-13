@@ -41,28 +41,31 @@ namespace SocketClientGUI
             // receiveBox
             // 
             this.receiveBox.Enabled = false;
-            this.receiveBox.Location = new System.Drawing.Point(335, 53);
+            this.receiveBox.Location = new System.Drawing.Point(447, 65);
+            this.receiveBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.receiveBox.Multiline = true;
             this.receiveBox.Name = "receiveBox";
-            this.receiveBox.Size = new System.Drawing.Size(300, 220);
+            this.receiveBox.Size = new System.Drawing.Size(399, 270);
             this.receiveBox.TabIndex = 0;
             // 
             // sendBox
             // 
             this.sendBox.Enabled = false;
-            this.sendBox.Location = new System.Drawing.Point(12, 53);
+            this.sendBox.Location = new System.Drawing.Point(16, 65);
+            this.sendBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sendBox.Multiline = true;
             this.sendBox.Name = "sendBox";
-            this.sendBox.Size = new System.Drawing.Size(300, 220);
+            this.sendBox.Size = new System.Drawing.Size(399, 270);
             this.sendBox.TabIndex = 1;
             this.sendBox.TextChanged += new System.EventHandler(this.sendBox_TextChanged);
             // 
             // sortButton
             // 
             this.sortButton.Enabled = false;
-            this.sortButton.Location = new System.Drawing.Point(62, 13);
+            this.sortButton.Location = new System.Drawing.Point(83, 16);
+            this.sortButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sortButton.Name = "sortButton";
-            this.sortButton.Size = new System.Drawing.Size(85, 23);
+            this.sortButton.Size = new System.Drawing.Size(113, 28);
             this.sortButton.TabIndex = 2;
             this.sortButton.Text = "Sort";
             this.sortButton.UseVisualStyleBackColor = true;
@@ -70,51 +73,59 @@ namespace SocketClientGUI
             // 
             // portBox
             // 
-            this.portBox.Location = new System.Drawing.Point(553, 15);
+            this.portBox.Location = new System.Drawing.Point(737, 18);
+            this.portBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.portBox.Name = "portBox";
-            this.portBox.Size = new System.Drawing.Size(81, 20);
+            this.portBox.Size = new System.Drawing.Size(107, 22);
             this.portBox.TabIndex = 3;
+            this.portBox.TextChanged += new System.EventHandler(this.portBox_TextChanged);
             // 
             // ipBox
             // 
-            this.ipBox.Location = new System.Drawing.Point(365, 16);
+            this.ipBox.Location = new System.Drawing.Point(487, 20);
+            this.ipBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ipBox.Name = "ipBox";
-            this.ipBox.Size = new System.Drawing.Size(150, 20);
-            this.ipBox.TabIndex = 4;
+            this.ipBox.Size = new System.Drawing.Size(199, 22);
+            this.ipBox.TabIndex = 3;
+            this.ipBox.TextChanged += new System.EventHandler(this.ipBox_TextChanged);
             // 
             // portLabel
             // 
             this.portLabel.AutoSize = true;
-            this.portLabel.Location = new System.Drawing.Point(521, 18);
+            this.portLabel.Location = new System.Drawing.Point(695, 22);
+            this.portLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.portLabel.Name = "portLabel";
-            this.portLabel.Size = new System.Drawing.Size(26, 13);
+            this.portLabel.Size = new System.Drawing.Size(34, 17);
             this.portLabel.TabIndex = 5;
             this.portLabel.Text = "Port";
             // 
             // idLabel
             // 
             this.idLabel.AutoSize = true;
-            this.idLabel.Location = new System.Drawing.Point(342, 19);
+            this.idLabel.Location = new System.Drawing.Point(456, 23);
+            this.idLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.idLabel.Name = "idLabel";
-            this.idLabel.Size = new System.Drawing.Size(17, 13);
+            this.idLabel.Size = new System.Drawing.Size(20, 17);
             this.idLabel.TabIndex = 6;
             this.idLabel.Text = "IP";
             // 
             // connectButton
             // 
-            this.connectButton.Location = new System.Drawing.Point(187, 14);
+            this.connectButton.Location = new System.Drawing.Point(249, 17);
+            this.connectButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.connectButton.Name = "connectButton";
-            this.connectButton.Size = new System.Drawing.Size(75, 23);
+            this.connectButton.Size = new System.Drawing.Size(100, 28);
             this.connectButton.TabIndex = 7;
             this.connectButton.Text = "Connect";
             this.connectButton.UseVisualStyleBackColor = true;
             this.connectButton.Click += new System.EventHandler(this.connectButton_Click);
+            this.connectButton.Enabled = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(647, 285);
+            this.ClientSize = new System.Drawing.Size(863, 351);
             this.Controls.Add(this.connectButton);
             this.Controls.Add(this.idLabel);
             this.Controls.Add(this.portLabel);
@@ -123,7 +134,7 @@ namespace SocketClientGUI
             this.Controls.Add(this.sortButton);
             this.Controls.Add(this.sendBox);
             this.Controls.Add(this.receiveBox);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Number sorting program";
             this.ResumeLayout(false);

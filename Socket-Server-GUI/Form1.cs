@@ -32,6 +32,7 @@ namespace Socket_Server_GUI
         }
         private void AcceptClientButton_Click(object sender, EventArgs e)
         {
+            server.Start();
             StartButton.Enabled = false;
             ExitButton.Enabled = true;
         }
@@ -48,11 +49,6 @@ namespace Socket_Server_GUI
         {
             server.End();
             this.Close();
-        }
-
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
-            server.Start();
         }
     }
 }

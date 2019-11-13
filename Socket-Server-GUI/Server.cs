@@ -77,6 +77,11 @@ namespace Socket_Server_GUI
                     Form1.show("Chuoi tra : " + s);
 
                     ns.Write(Encoding.ASCII.GetBytes(s), 0, s.Length);
+                    if (result == "")
+                    {
+                        Form1.show("socket is disconected");
+                        break;
+                    }
                 }
                 catch (Exception e)
                 {

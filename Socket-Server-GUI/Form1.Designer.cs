@@ -31,25 +31,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.StartButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(13, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.Size = new System.Drawing.Size(48, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Status";
             // 
             // StartButton
             // 
-            this.StartButton.Location = new System.Drawing.Point(66, 241);
-            this.StartButton.Margin = new System.Windows.Forms.Padding(2);
+            this.StartButton.Location = new System.Drawing.Point(88, 297);
+            this.StartButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.StartButton.Name = "StartButton";
-            this.StartButton.Size = new System.Drawing.Size(83, 25);
+            this.StartButton.Size = new System.Drawing.Size(111, 31);
             this.StartButton.TabIndex = 2;
             this.StartButton.Text = "Accept client";
             this.StartButton.UseVisualStyleBackColor = true;
@@ -58,28 +56,24 @@
             // ExitButton
             // 
             this.ExitButton.Enabled = false;
-            this.ExitButton.Location = new System.Drawing.Point(181, 241);
-            this.ExitButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ExitButton.Location = new System.Drawing.Point(241, 297);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(58, 24);
+            this.ExitButton.Size = new System.Drawing.Size(77, 30);
             this.ExitButton.TabIndex = 3;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // backgroundWorker1
-            // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
-            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(326, 275);
+            this.ClientSize = new System.Drawing.Size(435, 338);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.StartButton);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Server Sort";
             this.ResumeLayout(false);
@@ -92,7 +86,6 @@
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button StartButton;
         public System.Windows.Forms.Button ExitButton;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 
