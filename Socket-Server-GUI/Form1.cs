@@ -13,7 +13,7 @@ namespace Socket_Server_GUI
 {
     public partial class Form1 : Form
     {
-        private Server server = new Server();
+        private static Server server = new Server();
         private static TextBox textBox = new TextBox();
         public Form1()
         {
@@ -42,6 +42,10 @@ namespace Socket_Server_GUI
             {
                 textBox.Text += s;
                 textBox.Text += "\r\n";
+                if(s == "socket is disconected")
+                {
+                    server.Start();
+                }
             }));
         }
 
@@ -49,6 +53,11 @@ namespace Socket_Server_GUI
         {
             server.End();
             this.Close();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            server.End();
         }
     }
 }

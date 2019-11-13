@@ -18,3 +18,13 @@ C:\Users\Welcome\Documents\GitHub\Client-Server-Socket\SocketClientGUI\obj\Debug
 C:\Users\Welcome\Documents\GitHub\Client-Server-Socket\SocketClientGUI\obj\Debug\Socket-Client-GUI.csproj.CoreCompileInputs.cache
 C:\Users\Welcome\Documents\GitHub\Client-Server-Socket\SocketClientGUI\obj\Debug\SocketClientGUI.exe
 C:\Users\Welcome\Documents\GitHub\Client-Server-Socket\SocketClientGUI\obj\Debug\SocketClientGUI.pdb
+E:\GitHub\Client-Server-Socket\SocketClientGUI\bin\Debug\SocketClientGUI.exe.config
+E:\GitHub\Client-Server-Socket\SocketClientGUI\bin\Debug\SocketClientGUI.exe
+E:\GitHub\Client-Server-Socket\SocketClientGUI\bin\Debug\SocketClientGUI.pdb
+E:\GitHub\Client-Server-Socket\SocketClientGUI\obj\Debug\Socket-Client-GUI.csprojAssemblyReference.cache
+E:\GitHub\Client-Server-Socket\SocketClientGUI\obj\Debug\SocketClientGUI.Form1.resources
+E:\GitHub\Client-Server-Socket\SocketClientGUI\obj\Debug\SocketClientGUI.Properties.Resources.resources
+E:\GitHub\Client-Server-Socket\SocketClientGUI\obj\Debug\Socket-Client-GUI.csproj.GenerateResource.cache
+E:\GitHub\Client-Server-Socket\SocketClientGUI\obj\Debug\Socket-Client-GUI.csproj.CoreCompileInputs.cache
+E:\GitHub\Client-Server-Socket\SocketClientGUI\obj\Debug\SocketClientGUI.exe
+E:\GitHub\Client-Server-Socket\SocketClientGUI\obj\Debug\SocketClientGUI.pdb
