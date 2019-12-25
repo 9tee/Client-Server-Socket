@@ -1,4 +1,4 @@
-﻿namespace Socket_Server_GUI
+namespace Socket_Server_GUI
 {
     partial class Form1
     {
@@ -47,6 +47,7 @@
             // 
             this.StartButton.Location = new System.Drawing.Point(66, 241);
             this.StartButton.Margin = new System.Windows.Forms.Padding(2);
+            this.StartButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.StartButton.Name = "StartButton";
             this.StartButton.Size = new System.Drawing.Size(83, 25);
             this.StartButton.TabIndex = 2;
@@ -59,6 +60,7 @@
             this.ExitButton.Enabled = false;
             this.ExitButton.Location = new System.Drawing.Point(181, 241);
             this.ExitButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(58, 24);
             this.ExitButton.TabIndex = 3;
@@ -75,6 +77,7 @@
             this.Controls.Add(this.StartButton);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Server Sort";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);

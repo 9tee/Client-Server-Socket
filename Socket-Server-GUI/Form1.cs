@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,6 +38,7 @@ namespace Socket_Server_GUI
         }
         public static void show(string s)
         {
+
             try
             {
                 textBox.Invoke(new MethodInvoker(delegate ()
@@ -53,6 +54,15 @@ namespace Socket_Server_GUI
             {
                 Console.WriteLine(e.StackTrace);
             }
+            textBox.Invoke(new MethodInvoker(delegate ()
+            {
+                textBox.Text += s;
+                textBox.Text += "\r\n";
+                if(s == "socket is disconected")
+                {
+                    server.Start();
+                }
+            }));
         }
 
         private void ExitButton_Click(object sender, EventArgs e)

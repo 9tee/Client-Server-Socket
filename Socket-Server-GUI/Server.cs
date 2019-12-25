@@ -18,6 +18,10 @@ namespace Socket_Server_GUI
 
         private Stream ns; 
         private Thread recvThread; 
+        //private Timer timer = new Timer();
+        private Stream ns; 
+        private Thread recvThread; 
+        private int countClient = -1;
 
         public Server()
         {
@@ -35,6 +39,7 @@ namespace Socket_Server_GUI
                 ns.Close();
             }catch (Exception e)
             {
+
                Console.WriteLine(e.StackTrace);
             }
         }
@@ -42,7 +47,12 @@ namespace Socket_Server_GUI
         public void Start()
         {
             listener.Start();
+
             socket = listener.AcceptTcpClient();            
+
+            countClient++;
+            socket = listener.AcceptTcpClient();
+            
             string s = "A client has connected";
             Form1.show(s);
             ns = socket.GetStream();
@@ -52,6 +62,8 @@ namespace Socket_Server_GUI
 
         public void RevAndSend(Stream ns)
         {
+
+            countClient++;
             while (true)
             {
                 try
